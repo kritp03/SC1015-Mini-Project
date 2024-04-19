@@ -24,9 +24,13 @@ Using our model to detect emotions in children's faces can help us understand th
 
 ## Learning Points
 Technical:
+
     1. Overfitting: 
+    
      - When the training data size is too small and lacks samples to accurately represent all input values, it can lead to overfitting as the model is unable to generalize and fits too closely to the training dataset.
+     
      - Finding the 'sweet spot' of the learning rate is important as the extreme ends can lead to overfitting and underfitting.
+     
     2. 
 Ethical:
 
