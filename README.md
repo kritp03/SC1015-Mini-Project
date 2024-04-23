@@ -63,5 +63,11 @@ https://machinelearningmastery.com/dropout-for-regularizing-deep-neural-networks
 
 ## Contributors
 @kritp03:
+
 @sihjiaqi: 
+
 @weipingtee
+
+<a href="https://github.com/OWNER/REPO/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=OWNER/REPO" />
+</a>
