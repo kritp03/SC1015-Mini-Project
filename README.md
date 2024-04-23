@@ -24,23 +24,50 @@ Solution to Problem Statement:
 Using our model to detect emotions in children's faces can help us understand their emotional response during task engagement. This project has inspired the potential for technology to enhance education, especially in the field of early childhood education where children may not always be able to verbalize their thoughts. The introduction of this technology can aid educators in understanding their students better through their facial expressions.
 
 ## Learning Points
-Technical:
 
     1. Overfitting: 
     
      - When the training data size is too small and lacks samples to accurately represent all input values, it can lead to overfitting as the model is unable to generalize and fits too closely to the training dataset.
      
      - Finding the 'sweet spot' of the learning rate is important as the extreme ends can lead to overfitting and underfitting.
-     
-    2. 
-Ethical:
 
-Data Analysis:
+
+    2. Data Analysis
+
+    - Feature Engineering: to introduce a new column which stores the emotion with highest number of votes
+    - Visualizations using Plotly as it is interactive, clean and easy to understand.
+    - Data Augmentation: process of creating additional image samples from the original dataset, can help represent underrepresentated classes and make the dataset more robust and balaned
+
+
+    3. Modelling
+
+    - Used ResNet-50 to train on top of the basic CNN models as pre-trained models have already undergone extensive training, so we can achieve impressive results without having to access expensive hardware or massive datasets. 
+
+    - To be mindful of the number of layers that we are adding: stacking layers may not necessarily be a good thing as adding layers increases the number of weights in the network and the model complexity. If we do not have a large dataset, an increasingly large network can result in overfitting.
+
+    - Dropout layers: Improves the model's generalization performance by preventing overfitting. Randomly deactivating neurons during training prevents co-adaptation, and this forces the model to find and use truly robust features in the data. 
+
+    - Early Stopping: Stops training when parameter updates no longer begin to yield improves on a validation set. The use of early stopping prevent overfitting & enhance generalization. 
+
+    - Batch Normalization: Helps address issues like internal covariate shift and vanishing/exploding gradients which leads to faster convergence during training, allowing for the use of higher learning rates and reducing the sensitivity of the model to weight initialization
+
 
 ## References
 https://towardsdatascience.com/resnets-why-do-they-perform-better-than-classic-convnets-conceptual-analysis-6a9c82e06e53
 
+https://www.analyticsvidhya.com/blog/2021/03/introduction-to-batch-normalization/#:~:text=Batch%20normalization%20works%20by%20normalizing,not%20follow%20the%20original%20distribution.
+
+https://paperswithcode.com/method/early-stopping#:~:text=Early%20Stopping%20is%20a%20regularization,improves%20on%20a%20validation%20set.
+
+https://machinelearningmastery.com/dropout-for-regularizing-deep-neural-networks/
+
 ## Contributors
-    - @kritp03:
-    - @sihjiaqi: 
-    - @weipingtee
+@kritp03:
+
+@sihjiaqi: 
+
+@weipingtee
+
+<a href="https://github.com/OWNER/REPO/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=OWNER/REPO" />
+</a>
