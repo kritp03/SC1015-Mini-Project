@@ -3,6 +3,8 @@
 ## About
 This is a Mini-Project for SC1015 (Introduction to Data Science and Artificial Intelligence) which focuses on emotions from  <a href="">FER2013 dataset</a> and <a href="">FERPLUS2013 dataset</a>
 
+![alt text](https://github.com/kritp03/SC1015-Mini-Project/blob/main/assets/fer2013.png)
+
 ## Problem Statement 
 
 Understanding and managing students' emotional responses in educational settings is crucial in improving learning outcomes, especially for children who are unable to express themselves well verbally. We plan to create a deep learning model which is capable of accurately categorizing facial expressions into eight emotional states using convolutional neural networks (CNNs) trained on datasets like FER-2013 and FERPLUS. By discerning students' emotional reactions, educators can personalize teaching approaches and support methods to cater to individual learning needs effectively. 
@@ -73,6 +75,3 @@ https://machinelearningmastery.com/dropout-for-regularizing-deep-neural-networks
 
 @weipingtee
 
-<a href="https://github.com/OWNER/REPO/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=OWNER/REPO" />
-</a>
