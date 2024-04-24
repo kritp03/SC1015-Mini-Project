@@ -18,13 +18,6 @@ This brings us to our problem statement: How can we optimize children's learning
     2) CNN + Batch Normalization + Dropout
     3) CNN + Batch Normalization + Dropout + Data Augmentation
     4) ResNet-50
-
-| Model | Train Accuracy | Validate Accuracy | Test Accuracy |
-| --- | --- | --- | --- |
-| Baseline CNN | 0.9921  | 0.7247 | 0.6227 |
-| CNN with BN + Dropout | 0.9721  | 0.7686 | 0.7518 |
-| CNN with BN + Dropout + Data Augmentation | 0.8996  | 0.8179 | 0.8167 |
-| ResNet-50 | 0.8760  | 0.8761 | 0.8752 |
    
 ## Conclusion
 <b>Best Performance Model </b>: CNN + Batch Normalization + Dropout + Data Augmentation (3rd Model)
