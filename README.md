@@ -100,7 +100,6 @@ Using our model to detect emotions in children's faces can help us understand th
 - `Tackle Imbalanced datasets`: Leverage on methods like `re-weighting` with the sklearn class_weight.compute_class_weight function. This strategy allows us to modify our loss function by assigning `increased costs` to instances from `minority` classes, offering the potential to enhance the model's efficacy on datasets with imbalanced class distributions.
 - `Real Time detection`: Implement Real-Time Emotion Detection using OpenCV
 
-
 ## References
 1. [FER-2013 Dataset](https://www.kaggle.com/datasets/msambare/fer2013/data)
 2. [FERPLUS Dataset](https://www.kaggle.com/datasets/ss1033741293/ferplus)
