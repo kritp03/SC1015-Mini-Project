@@ -28,8 +28,7 @@ if option == "Upload Image":
         st.image(image, caption="Uploaded Image", use_column_width=True)
 
         image = image.resize((48, 48)).convert('L')
-        img_array = np.array(image)
-        img_array = img_array / 255.0
+        img_array = np.array(image) / 255.0
         img_array = np.expand_dims(img_array, axis=0)
 
         prediction = model.predict(img_array)
@@ -50,42 +49,52 @@ if option == "Upload Image":
                     yaxis=dict(range=[0, 100]))
         st.plotly_chart(fig, use_container_width=True)
 
-
-
 elif option == "Capture from Camera":
-    st.write("Camera Capture Mode")
+    st.subheader("Camera Capture Mode")
+    st.write("Press the 'Capture Frame' button to capture a frame from the camera.")
 
-    # cap = cv2.VideoCapture(0)  # 0 indicates the default camera
+    cap = cv2.VideoCapture(0)
 
-    # if not cap.isOpened():
-    #     st.write("Error: Could not open camera.")
-    #     st.stop()
+    if not cap.isOpened():
+        st.write("Error: Could not open camera.")
+        st.stop()
 
-    # stop_camera_button_key = "stop_camera_button"  # Unique key for the button
+    st.write("##")
+    stopBtn = st.button("Capture Frame")
 
-    # while True:
-    #     ret, frame = cap.read()
+    while True:
+        ret, frame = cap.read()
 
-    #     if not ret:
-    #         st.write("Error: Could not read frame from camera.")
-    #         break
+        if not ret:
+            st.write("Error: Could not read frame from camera.")
+            break
 
-    #     frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-    #     st.image(frame_rgb, channels="RGB", use_column_width=True, caption="Camera Capture")
+        if stopBtn:
+            frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            st.image(frame_rgb, channels="RGB", use_column_width=True, caption="Camera Capture")
 
-    #     resized_frame = cv2.resize(frame_rgb, (224, 224)) / 255.0
-    #     image = np.expand_dims(resized_frame, axis=0)
+            frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+            frame_gray_resized = cv2.resize(frame_gray, (48, 48))
+            img_array = np.array(frame_gray_resized) / 255.0
+            img_array = np.expand_dims(img_array, axis=0)
 
-    #     prediction = model.predict(image)
-    #     predicted_class_index = np.argmax(prediction)
-    #     predicted_class = class_labels[predicted_class_index]
-    #     confidence = prediction[0][predicted_class_index]
+            prediction = model.predict(img_array)
+            predicted_class_index = np.argmax(prediction)
+            predicted_class = class_labels[predicted_class_index]
+            confidence = prediction[0][predicted_class_index]
+            prediction_percentages = prediction[0] * 100
 
-    #     st.write(f"Predicted Class: {predicted_class}")
-    #     st.write(f"Confidence: {confidence:.2f}")  # Display confidence with 2 decimal places
+            st.write("##")
+            st.subheader("Model Prediction")
+            st.write(f"Predicted Class: {predicted_class}")
+            st.write(f"Confidence: {confidence:.2f}")
 
-    #     # Check for user input to stop camera capture
-    #     if st.button("Stop Camera", key=stop_camera_button_key):
-    #         break
+            st.write("##")
+            st.subheader("Probability Distribution of Model Prediction")
+            fig = px.bar(x=class_labels, y=prediction_percentages, labels={'x': 'Emotion Categories', 'y': 'Probability (%)'})
+            fig.update_layout(xaxis_title="Emotions", yaxis_title="Probability (%)",
+                        yaxis=dict(range=[0, 100]))
+            st.plotly_chart(fig, use_container_width=True)
+            break
 
-    # cap.release()
+    cap.release()
