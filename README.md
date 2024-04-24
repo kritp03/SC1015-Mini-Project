@@ -98,7 +98,9 @@ Using our model to detect emotions in children's faces can help us understand th
 
 ## Future Work
 - `Tackle Imbalanced datasets`: Leverage on methods like `re-weighting` with the sklearn class_weight.compute_class_weight function. This strategy allows us to modify our loss function by assigning `increased costs` to instances from `minority` classes, offering the potential to enhance the model's efficacy on datasets with imbalanced class distributions.
-- `Real Time detection`: Implement Real-Time Emotion Detection using OpenCV
+- `Real-Time Emotion Detection`: We can explore functions provided by OpenCV to capture live video frames and input them into the trained model for real-time image prediction.
+- `PCA & Outliers`: PCA can be used to help identify outliers by comparing the original images with their reconstructed versions. Establishing a threshold for the reconstruction error allows for the identification of images exhibiting significantly higher errors and flagging them as outliers. [Click here](https://builtin.com/data-science/step-step-explanation-principal-component-analysis) for a detailed explanation on what PCA is.
+
 
 ## References
 1. [FER-2013 Dataset](https://www.kaggle.com/datasets/msambare/fer2013/data)
@@ -108,6 +110,7 @@ Using our model to detect emotions in children's faces can help us understand th
 5. [Batch Normalization](https://www.analyticsvidhya.com/blog/2021/03/introduction-to-batch-normalization/#:~:text=Batch%20normalization%20works%20by%20normalizing,not%20follow%20the%20original%20distribution.)
 6. [Early Stopping](https://paperswithcode.com/method/early-stopping#:~:text=Early%20Stopping%20is%20a%20regularization,improves%20on%20a%20validation%20set.)
 7. [Dropout](https://machinelearningmastery.com/dropout-for-regularizing-deep-neural-networks/)
+8. [PCA](https://builtin.com/data-science/step-step-explanation-principal-component-analysis)
 
 ## Contributors
 | Name | GitHub Account |
