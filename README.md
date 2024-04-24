@@ -107,6 +107,7 @@ Using our model to detect emotions in children's faces can help us understand th
 
 ## Deployed Web Application on Streamlit
 Try it out at: https://sc1015-group1-facial-emotion-recognition.streamlit.app/
+
 ![demo](https://github.com/kritp03/SC1015-Mini-Project/blob/main/assets/demo.gif)
 
 ## References
