@@ -24,7 +24,7 @@ This brings us to our problem statement: How can we optimize children's learning
 
 The model with Batch Normalization, Dropout and Data Augmentation performed the best in terms of metrics and image predictions. It attained an accuracy of 0.8167, and a loss of 0.1483, outperforming the primitive CNN model. 
 
-Our ResNet-50 model attained an accuracy of 0.8752 but a loss of 1.5536. Despite having a higher accuracy than the tuned CNN, it was unable to perform well on unseen data due to `Domain Shift`, `Feature Relevance` as well as `Bias and Generalization`. More of this is elaborated in our notebook 
+Our ResNet-50 model attained an accuracy of 0.8752 but a loss of 1.5536. Despite having a higher accuracy than the tuned CNN, it was unable to perform well on unseen data due to `Domain Shift`, `Feature Relevance` as well as `Bias and Generalization`. More of this is elaborated [here](https://github.com/kritp03/SC1015-Mini-Project/blob/main/SC1015_Mini_Project.ipynb)
 
 The baseline CNN model achieved an accuracy of 0.6227, and a loss of 7.1700 while the tuned CNN model (with Batch Normalization, Dropout and Data Augmentation) achieved an accuracy of 0.8142, and a loss of 0.1441.
 
@@ -98,6 +98,7 @@ Using our model to detect emotions in children's faces can help us understand th
 
 ## Future Work
 - `Tackle Imbalanced datasets`: Leverage on methods like `re-weighting` with the sklearn class_weight.compute_class_weight function. This strategy allows us to modify our loss function by assigning `increased costs` to instances from `minority` classes, offering the potential to enhance the model's efficacy on datasets with imbalanced class distributions.
+- `Real Time detection`: Implement Real-Time Emotion Detection using OpenCV
 
 
 ## References
@@ -112,6 +113,6 @@ Using our model to detect emotions in children's faces can help us understand th
 ## Contributors
 | Name | GitHub Account |
 | --- | --- |
-| Sih Jia Qi | [@kritp03](https://github.com/kritp03) |
-| Tee Wei Ping | [@sihjiaqi](https://github.com/sihjiaqi) |
-| Ponyuenyong Kritchanat | [@weipingtee](https://github.com/weipingtee) |
+| Ponyuenyong Kritchanat | [@kritp03](https://github.com/kritp03) |
+| Sih Jia Qi | [@sihjiaqi](https://github.com/sihjiaqi) |
+| Tee Wei Ping | [@weipingtee](https://github.com/weipingtee) |
