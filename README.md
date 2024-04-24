@@ -3,7 +3,11 @@
 ![alt text](https://github.com/kritp03/SC1015-Mini-Project/blob/main/assets/cover.jpeg)
 
 ## About
-This is a Mini-Project for SC1015 (Introduction to Data Science and Artificial Intelligence) which focuses on emotions from FER2013 dataset and FERPLUS2013 dataset
+This is a Mini-Project for SC1015 (Introduction to Data Science and Artificial Intelligence) which focuses on emotions from FER2013 dataset and FERPLUS2013 dataset.
+
+Our `presentation video` can be found [here]().
+
+And our `Streamlit online applciation` for emotion detection can be accessed via [this link](https://sc1015-group1-facial-emotion-recognition.streamlit.app/).
 
 ![alt text](https://github.com/kritp03/SC1015-Mini-Project/blob/main/assets/emotion_image.png)
 
@@ -100,7 +104,6 @@ Using our model to detect emotions in children's faces can help us understand th
 - `Tackle Imbalanced datasets`: Leverage on methods like `re-weighting` with the sklearn class_weight.compute_class_weight function. This strategy allows us to modify our loss function by assigning `increased costs` to instances from `minority` classes, offering the potential to enhance the model's efficacy on datasets with imbalanced class distributions.
 - `Real-Time Emotion Detection`: We can explore functions provided by OpenCV to capture live video frames and input them into the trained model for real-time image prediction.
 - `PCA & Outliers`: PCA can be used to help identify outliers by comparing the original images with their reconstructed versions. Establishing a threshold for the reconstruction error allows for the identification of images exhibiting significantly higher errors and flagging them as outliers. [Click here](https://builtin.com/data-science/step-step-explanation-principal-component-analysis) for a detailed explanation on what PCA is.
-
 
 ## References
 1. [FER-2013 Dataset](https://www.kaggle.com/datasets/msambare/fer2013/data)
