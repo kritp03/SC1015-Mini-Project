@@ -3,6 +3,7 @@ import numpy as np
 import cv2
 import tensorflow as tf
 from PIL import Image
+import plotly.express as px
 
 json_path = "models/Model-3/model8166.json"
 weights_path = "models/Model-3/model8166.h5"
@@ -14,11 +15,13 @@ model.load_weights(weights_path)
 
 class_labels = ['neutral', 'sadness', 'happiness', 'surprise', 'anger', 'fear', 'contempt', 'disgust']
 st.title("Facial Emotion Recognition Web App")
+st.divider()
 
 option = st.sidebar.selectbox("Select an option", ("Upload Image", "Capture from Camera"))
 
 if option == "Upload Image":
-    uploaded_image = st.file_uploader("Choose an image...", type=["jpg", "png", "jpeg"])
+    st.subheader("Upload an image for prediction")
+    uploaded_image = st.file_uploader("", type=["jpg", "png", "jpeg"])
 
     if uploaded_image is not None:
         image = Image.open(uploaded_image)
@@ -33,9 +36,21 @@ if option == "Upload Image":
         predicted_class_index = np.argmax(prediction)
         predicted_class = class_labels[predicted_class_index]
         confidence = prediction[0][predicted_class_index]
+        prediction_percentages = prediction[0] * 100
 
+        st.write("##")
+        st.subheader("Model Prediction")
         st.write(f"Predicted Class: {predicted_class}")
         st.write(f"Confidence: {confidence:.2f}")
+
+        st.write("##")
+        st.subheader("Probability Distribution of Model Prediction")
+        fig = px.bar(x=class_labels, y=prediction_percentages, labels={'x': 'Emotion Categories', 'y': 'Probability (%)'})
+        fig.update_layout(xaxis_title="Emotions", yaxis_title="Probability (%)",
+                    yaxis=dict(range=[0, 100]))
+        st.plotly_chart(fig, use_container_width=True)
+
+
 
 elif option == "Capture from Camera":
     st.write("Camera Capture Mode")
