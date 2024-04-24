@@ -1,5 +1,7 @@
 # SC1015 Mini Project: Facial Emotion Recognition
 
+![alt text](https://github.com/kritp03/SC1015-Mini-Project/blob/main/assets/cover.jpeg)
+
 ## About
 This is a Mini-Project for SC1015 (Introduction to Data Science and Artificial Intelligence) which focuses on emotions from FER2013 dataset and FERPLUS2013 dataset
 
