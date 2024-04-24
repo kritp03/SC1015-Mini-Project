@@ -50,51 +50,52 @@ if option == "Upload Image":
         st.plotly_chart(fig, use_container_width=True)
 
 elif option == "Capture from Camera":
-    st.subheader("Camera Capture Mode")
-    st.write("Press the 'Capture Frame' button to capture a frame from the camera.")
+    st.subheader("Work in Progress")
+#     st.subheader("Camera Capture Mode")
+#     st.write("Press the 'Capture Frame' button to capture a frame from the camera.")
 
-    cap = cv2.VideoCapture(0)
+#     cap = cv2.VideoCapture(0)
 
-    if not cap.isOpened():
-        st.write("Error: Could not open camera.")
-        st.stop()
+#     if not cap.isOpened():
+#         st.write("Error: Could not open camera.")
+#         st.stop()
 
-    st.write("##")
-    stopBtn = st.button("Capture Frame")
+#     st.write("##")
+#     stopBtn = st.button("Capture Frame")
 
-    while True:
-        ret, frame = cap.read()
+#     while True:
+#         ret, frame = cap.read()
 
-        if not ret:
-            st.write("Error: Could not read frame from camera.")
-            break
+#         if not ret:
+#             st.write("Error: Could not read frame from camera.")
+#             break
 
-        if stopBtn:
-            frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-            st.image(frame_rgb, channels="RGB", use_column_width=True, caption="Camera Capture")
+#         if stopBtn:
+#             frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+#             st.image(frame_rgb, channels="RGB", use_column_width=True, caption="Camera Capture")
 
-            frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-            frame_gray_resized = cv2.resize(frame_gray, (48, 48))
-            img_array = np.array(frame_gray_resized) / 255.0
-            img_array = np.expand_dims(img_array, axis=0)
+#             frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+#             frame_gray_resized = cv2.resize(frame_gray, (48, 48))
+#             img_array = np.array(frame_gray_resized) / 255.0
+#             img_array = np.expand_dims(img_array, axis=0)
 
-            prediction = model.predict(img_array)
-            predicted_class_index = np.argmax(prediction)
-            predicted_class = class_labels[predicted_class_index]
-            confidence = prediction[0][predicted_class_index]
-            prediction_percentages = prediction[0] * 100
+#             prediction = model.predict(img_array)
+#             predicted_class_index = np.argmax(prediction)
+#             predicted_class = class_labels[predicted_class_index]
+#             confidence = prediction[0][predicted_class_index]
+#             prediction_percentages = prediction[0] * 100
 
-            st.write("##")
-            st.subheader("Model Prediction")
-            st.write(f"Predicted Class: {predicted_class}")
-            st.write(f"Confidence: {confidence:.2f}")
+#             st.write("##")
+#             st.subheader("Model Prediction")
+#             st.write(f"Predicted Class: {predicted_class}")
+#             st.write(f"Confidence: {confidence:.2f}")
 
-            st.write("##")
-            st.subheader("Probability Distribution of Model Prediction")
-            fig = px.bar(x=class_labels, y=prediction_percentages, labels={'x': 'Emotion Categories', 'y': 'Probability (%)'})
-            fig.update_layout(xaxis_title="Emotions", yaxis_title="Probability (%)",
-                        yaxis=dict(range=[0, 100]))
-            st.plotly_chart(fig, use_container_width=True)
-            break
+#             st.write("##")
+#             st.subheader("Probability Distribution of Model Prediction")
+#             fig = px.bar(x=class_labels, y=prediction_percentages, labels={'x': 'Emotion Categories', 'y': 'Probability (%)'})
+#             fig.update_layout(xaxis_title="Emotions", yaxis_title="Probability (%)",
+#                         yaxis=dict(range=[0, 100]))
+#             st.plotly_chart(fig, use_container_width=True)
+#             break
 
-    cap.release()
+#     cap.release()
