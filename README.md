@@ -120,8 +120,8 @@ Try it out at: https://sc1015-group1-facial-emotion-recognition.streamlit.app/
 8. [PCA](https://builtin.com/data-science/step-step-explanation-principal-component-analysis)
 
 ## Contributors
-| Name | GitHub Account |
-| --- | --- |
-| Ponyuenyong Kritchanat | [@kritp03](https://github.com/kritp03) |
-| Sih Jia Qi | [@sihjiaqi](https://github.com/sihjiaqi) |
-| Tee Wei Ping | [@weipingtee](https://github.com/weipingtee) |
+| Name | GitHub Account | Contributions |
+| --- | --- | --- |
+| Ponyuenyong Kritchanat | [@kritp03](https://github.com/kritp03) | Transfer Learning and Streamlit Application |
+| Sih Jia Qi | [@sihjiaqi](https://github.com/sihjiaqi) | Data Preparation and EDA, Model Building |
+| Tee Wei Ping | [@weipingtee](https://github.com/weipingtee) | Model Building and Hyperparameter Tuning, Transfer Learning |
