@@ -106,7 +106,7 @@ Using our model to detect emotions in children's faces can help us understand th
 - `PCA & Outliers`: PCA can be used to help identify outliers by comparing the original images with their reconstructed versions. Establishing a threshold for the reconstruction error allows for the identification of images exhibiting significantly higher errors and flagging them as outliers. [Click here](https://builtin.com/data-science/step-step-explanation-principal-component-analysis) for a detailed explanation on what PCA is.
 
 ## Deployed Web Application on Streamlit
-Try it our at: https://sc1015-group1-facial-emotion-recognition.streamlit.app/
+Try it out at: https://sc1015-group1-facial-emotion-recognition.streamlit.app/
 ![demo](https://github.com/kritp03/SC1015-Mini-Project/blob/main/assets/demo.gif)
 
 ## References
