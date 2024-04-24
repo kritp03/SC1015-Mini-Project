@@ -5,7 +5,7 @@
 ## About
 This is a Mini-Project for SC1015 (Introduction to Data Science and Artificial Intelligence) which focuses on emotions from FER2013 dataset and FERPLUS2013 dataset.
 
-Our `presentation video` can be found [here]().
+Our `presentation video` can be found [here](https://youtu.be/F7IvyGcK9oA).
 
 And our `Streamlit online applciation` for emotion detection can be accessed via [this link](https://sc1015-group1-facial-emotion-recognition.streamlit.app/).
 
