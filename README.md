@@ -9,15 +9,20 @@ This is a Mini-Project for SC1015 (Introduction to Data Science and Artificial I
 
 Understanding and managing students' emotional responses in educational settings is crucial in improving learning outcomes, especially for children who are unable to express themselves well verbally. We plan to create a deep learning model which is capable of accurately categorizing facial expressions into eight emotional states using convolutional neural networks (CNNs) trained on datasets like FER-2013 and FERPLUS. By discerning students' emotional reactions, educators can personalize teaching approaches and support methods to cater to individual learning needs effectively. 
 
-
 This brings us to our problem statement: How can we optimize children's learning experience by analyzing their emotional response during task engagement?
 
-
-## Models used
+## Models Used and Model Performances
     1) CNN Model
     2) CNN + Batch Normalization + Dropout
     3) CNN + Batch Normalization + Dropout + Data Augmentation
     4) ResNet-50
+
+| Model | Train Accuracy | Validate Accuracy | Test Accuracy |
+| --- | --- | --- | --- |
+| Baseline CNN | 0.9921  | 0.7247 | 0.6227 |
+| CNN with BN + Dropout | 0.9721  | 0.7686 | 0.7518 |
+| CNN with BN + Dropout + Data Augmentation | 0.8996  | 0.8179 | 0.8167 |
+| ResNet-50 | 0.8760  | 0.8761 | 0.8752 |
    
 ## Conclusion
 Best Performance Model: ResNet-50
@@ -60,18 +65,17 @@ Using our model to detect emotions in children's faces can help us understand th
 
 
 ## References
-https://towardsdatascience.com/resnets-why-do-they-perform-better-than-classic-convnets-conceptual-analysis-6a9c82e06e53
-
-https://www.analyticsvidhya.com/blog/2021/03/introduction-to-batch-normalization/#:~:text=Batch%20normalization%20works%20by%20normalizing,not%20follow%20the%20original%20distribution.
-
-https://paperswithcode.com/method/early-stopping#:~:text=Early%20Stopping%20is%20a%20regularization,improves%20on%20a%20validation%20set.
-
-https://machinelearningmastery.com/dropout-for-regularizing-deep-neural-networks/
+1. [FER-2013 Dataset](https://www.kaggle.com/datasets/msambare/fer2013/data)
+2. [FERPLUS Dataset](https://www.kaggle.com/datasets/ss1033741293/ferplus)
+3. [ResNet](https://towardsdatascience.com/resnets-why-do-they-perform-better-than-classic-convnets-conceptual-analysis-6a9c82e06e53)
+4. [Addressing Class Imbalance](https://medium.com/@dudjakmario/addressing-the-problem-of-class-imbalance-part-1-4-9690d9cd41a2)
+5. [Batch Normalization](https://www.analyticsvidhya.com/blog/2021/03/introduction-to-batch-normalization/#:~:text=Batch%20normalization%20works%20by%20normalizing,not%20follow%20the%20original%20distribution.)
+6. [Early Stopping](https://paperswithcode.com/method/early-stopping#:~:text=Early%20Stopping%20is%20a%20regularization,improves%20on%20a%20validation%20set.)
+7. [Dropout](https://machinelearningmastery.com/dropout-for-regularizing-deep-neural-networks/)
 
 ## Contributors
-@kritp03:
-
-@sihjiaqi: 
-
-@weipingtee
-
+| Name | GitHub Account |
+| --- | --- |
+| Sih Jia Qi | [@kritp03](https://github.com/kritp03) |
+| Tee Wei Ping | [@sihjiaqi](https://github.com/sihjiaqi) |
+| Ponyuenyong Kritchanat | [@weipingtee](https://github.com/weipingtee) |
