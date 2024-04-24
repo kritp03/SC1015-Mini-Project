@@ -105,6 +105,10 @@ Using our model to detect emotions in children's faces can help us understand th
 - `Real-Time Emotion Detection`: We can explore functions provided by OpenCV to capture live video frames and input them into the trained model for real-time image prediction.
 - `PCA & Outliers`: PCA can be used to help identify outliers by comparing the original images with their reconstructed versions. Establishing a threshold for the reconstruction error allows for the identification of images exhibiting significantly higher errors and flagging them as outliers. [Click here](https://builtin.com/data-science/step-step-explanation-principal-component-analysis) for a detailed explanation on what PCA is.
 
+## Deployed Web Application on Streamlit
+Try it out at: https://sc1015-group1-facial-emotion-recognition.streamlit.app/
+![demo](https://github.com/kritp03/SC1015-Mini-Project/blob/main/assets/demo.gif)
+
 ## References
 1. [FER-2013 Dataset](https://www.kaggle.com/datasets/msambare/fer2013/data)
 2. [FERPLUS Dataset](https://www.kaggle.com/datasets/ss1033741293/ferplus)
