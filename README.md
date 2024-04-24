@@ -20,13 +20,51 @@ This brings us to our problem statement: How can we optimize children's learning
     4) ResNet-50
    
 ## Conclusion
-Best Performance Model: ResNet-50
+<b>Best Performance Model </b>: CNN + Batch Normalization + Dropout + Data Augmentation (3rd Model)
 
-The ResNet-50 model performed the best with an accuracy of 0.8752, and a loss of 1.5336, outperforming the primitive CNN model. ResNets are able to perform better than the general CNN models as they are built by stacking residual blocks on top of one another and go as long as a hundred layers per network, efficiently learning all the parameters from early activations deeper in the network. 
+The model with Batch Normalization, Dropout and Data Augmentation performed the best in terms of metrics and image predictions. It attained an accuracy of 0.8167, and a loss of 0.1483, outperforming the primitive CNN model. 
+
+Our ResNet-50 model attained an accuracy of 0.8752 but a loss of 1.5536. Despite having a higher accuracy than the tuned CNN, it was unable to perform well on unseen data due to `Domain Shift`, `Feature Relevance` as well as `Bias and Generalization`. More of this is elaborated in our notebook 
 
 The baseline CNN model achieved an accuracy of 0.6227, and a loss of 7.1700 while the tuned CNN model (with Batch Normalization, Dropout and Data Augmentation) achieved an accuracy of 0.8142, and a loss of 0.1441.
 
-Solution to Problem Statement:
+<b>Summary of Performance Metrics</b>
+
+<table>
+  <tr>
+    <th>Model</th>
+    <th>Train Accuracy</th>
+    <th>Test Accuracy</th>
+    <th>Validate Accuracy</th>
+  </tr>
+  <tr>
+    <td>Baseline CNN</td>
+    <td>0.9921</td>
+    <td>0.6227</td>
+    <td>0.7247</td>
+  </tr>
+  <tr>
+    <td>CNN with Batch Normalization (BN) + Dropout</td>
+    <td>0.9721</td>
+    <td>0.7518 </td>
+    <td>0.7686</td>
+  </tr>
+  <tr>
+    <td>CNN with BN + Dropout + Data Augmentation</td>
+    <td>0.8996</td>
+    <td>0.8167</td>
+    <td>0.8179</td>
+  </tr>
+  <tr>
+    <td>Pretrained ResNet-50 </td>
+    <td>0.8760</td>
+    <td>0.8752</td>
+    <td>0.8761</td>
+  </tr>
+</table>
+
+
+<h3><b>Solution to Problem Statement: </b></h3>
 
 Using our model to detect emotions in children's faces can help us understand their emotional response during task engagement. This project has inspired the potential for technology to enhance education, especially in the field of early childhood education where children may not always be able to verbalize their thoughts. The introduction of this technology can aid educators in understanding their students better through their facial expressions.
 
@@ -57,6 +95,9 @@ Using our model to detect emotions in children's faces can help us understand th
     - Early Stopping: Stops training when parameter updates no longer begin to yield improves on a validation set. The use of early stopping prevent overfitting & enhance generalization. 
 
     - Batch Normalization: Helps address issues like internal covariate shift and vanishing/exploding gradients which leads to faster convergence during training, allowing for the use of higher learning rates and reducing the sensitivity of the model to weight initialization
+
+## Future Work
+- `Tackle Imbalanced datasets`: Leverage on methods like `re-weighting` with the sklearn class_weight.compute_class_weight function. This strategy allows us to modify our loss function by assigning `increased costs` to instances from `minority` classes, offering the potential to enhance the model's efficacy on datasets with imbalanced class distributions.
 
 
 ## References
