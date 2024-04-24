@@ -3,4 +3,4 @@ pandas
 Pillow
 opencv-python-headless
 streamlit
-tensorflow
+tensorflow==2.15.0
