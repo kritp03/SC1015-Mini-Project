@@ -7,7 +7,7 @@ This is a Mini-Project for SC1015 (Introduction to Data Science and Artificial I
 
 Our `presentation video` can be found [here](https://youtu.be/F7IvyGcK9oA).
 
-And our `Streamlit online applciation` for emotion detection can be accessed via [this link](https://sc1015-group1-facial-emotion-recognition.streamlit.app/).
+And our `Streamlit online application` for emotion detection can be accessed via [this link](https://sc1015-group1-facial-emotion-recognition.streamlit.app/).
 
 ![alt text](https://github.com/kritp03/SC1015-Mini-Project/blob/main/assets/emotion_image.png)
 
